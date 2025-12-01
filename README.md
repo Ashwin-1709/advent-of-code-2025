@@ -1,5 +1,5 @@
 ## Advent of Code 2025
-This winter I am trying to learn `haskell` with AoC 2025!
+This winter I am trying to learn `lua` with AoC 2025!
 
 Happy Holidays!
 
