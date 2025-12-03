@@ -12,7 +12,6 @@ end
 function solve(banks)
     local joltage, multi_joltage = 0, 0
 
-    
     for _, bank in ipairs(banks) do 
         local dp = {}
         function dp.generate_key(index, moves_pending)
