@@ -35,3 +35,5 @@ Brute force the answer
 Break down each operation into $x$ full circles and $y$ partial moves.
 #### Day 3
 We can find the optimal joltage for each bank using dynamic programming in $O(n * m)$ where $n$ is the length of the bank and $m$ is the number of batteries required to power the bank.
+#### Day 4
+Brute force the simulation till no more rolls can be removed.
