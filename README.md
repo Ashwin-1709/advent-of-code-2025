@@ -39,3 +39,9 @@ We can find the optimal joltage for each bank using dynamic programming in $O(n 
 Brute force the simulation till no more rolls can be removed.
 #### Day 5
 Brute force check each range whether the ingredient id belongs to it. For the second part we can sort the ranges by $l$ and keep on merging ranges if there is an overlap.
+#### Day 7
+For the first part, we can do a simple bfs from the starting position $(sx, sy)$ and count the number of splits while also ensuring we do not process the same cell twice.
+
+For the second part, we can use dynamic programming to count the number of timelines. Let $dp(x, y)$ be number of timelines originating from $(x, y)$. The transitions are as follows:
+- If character at $(x + 1, y)$ is `.` then $dp(x, y) = dp(x + 1, y)$
+- If we have to split at $(x + 1, y)$ then $dp(x, y) = dp(x + 1, y - 1) + dp(x + 1, y + 1)$
