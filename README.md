@@ -37,3 +37,5 @@ Break down each operation into $x$ full circles and $y$ partial moves.
 We can find the optimal joltage for each bank using dynamic programming in $O(n * m)$ where $n$ is the length of the bank and $m$ is the number of batteries required to power the bank.
 #### Day 4
 Brute force the simulation till no more rolls can be removed.
+#### Day 5
+Brute force check each range whether the ingredient id belongs to it. For the second part we can sort the ranges by $l$ and keep on merging ranges if there is an overlap.
