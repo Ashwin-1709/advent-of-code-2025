@@ -45,3 +45,9 @@ For the first part, we can do a simple bfs from the starting position $(sx, sy)$
 For the second part, we can use dynamic programming to count the number of timelines. Let $dp(x, y)$ be number of timelines originating from $(x, y)$. The transitions are as follows:
 #### Day 8
 Compute squared Euclidean distances for every pair of junction boxes since the number of junctions is fairly low, sort those connections by distance, and merge them in increasing order using DSU.
+#### Day 9
+Loop over all pairs of possible end edges of the rectangle.
+
+For the second part, a rectangle is only valid iff:
+1. All of its end vertices are inside the polygon - This can be determined by the [Ray Casting Algorithm](https://en.wikipedia.org/wiki/Point_in_polygon#Ray_casting_algorithm).
+2. No edges of the polygon cut through the interior of the rectangle - This can be determined by iterating over all edges of the polygon. Since all edges are at 90 degree they are essentially vertical or horizontal walls.
