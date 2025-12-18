@@ -43,6 +43,10 @@ Brute force check each range whether the ingredient id belongs to it. For the se
 For the first part, we can do a simple bfs from the starting position $(sx, sy)$ and count the number of splits while also ensuring we do not process the same cell twice.
 
 For the second part, we can use dynamic programming to count the number of timelines. Let $dp(x, y)$ be number of timelines originating from $(x, y)$. The transitions are as follows:
+
+- If character at $(x + 1, y)$ is `.` then $dp(x, y) = dp(x + 1, y)$
+- If we have to split at $(x + 1, y)$ then $dp(x, y) = dp(x + 1, y - 1) + dp(x + 1, y + 1)$
+
 #### Day 8
 Compute squared Euclidean distances for every pair of junction boxes since the number of junctions is fairly low, sort those connections by distance, and merge them in increasing order using DSU.
 #### Day 9
