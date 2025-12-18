@@ -58,4 +58,4 @@ For the second part, a rectangle is only valid iff:
 #### Day 11
 Since its a directed graph and number of paths is finite, we are sure there won't be any cycles. We can use simple recursive dynamic programming to compute the number of paths.
 
-For the second part, we can maintain the set of required nodes visited using a bitmask and the transitions will be $dp(node,\,mask)=\sum_{v\in\mathrm{out}(node)} dp\big(v,\;mask\;|\;\mathrm{id}(node)\big)$
+For the second part, we can maintain the set of required nodes visited using a bitmask and the transitions will be $dp(node, mask)=\sum_{v\in\mathrm{out}(node)}dp(v, mask | \mathrm{id}(node))$
