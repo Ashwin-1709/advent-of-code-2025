@@ -51,3 +51,7 @@ Loop over all pairs of possible end edges of the rectangle.
 For the second part, a rectangle is only valid iff:
 1. All of its end vertices are inside the polygon - This can be determined by the [Ray Casting Algorithm](https://en.wikipedia.org/wiki/Point_in_polygon#Ray_casting_algorithm).
 2. No edges of the polygon cut through the interior of the rectangle - This can be determined by iterating over all edges of the polygon. Since all edges are at 90 degree they are essentially vertical or horizontal walls.
+#### Day 11
+Since its a directed graph and number of paths is finite, we are sure there won't be any cycles. We can use simple recursive dynamic programming to compute the number of paths.
+
+For the second part, we can maintain the set of required nodes visited using a bitmask and the transitions will be $dp(node,\,mask)=\sum_{v\in\mathrm{out}(node)} dp\big(v,\;mask\;|\;\mathrm{id}(node)\big)$
